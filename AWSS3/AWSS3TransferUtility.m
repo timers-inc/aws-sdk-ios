@@ -57,10 +57,6 @@ NSString *const AWSS3TransferUtilityUserAgent = @"transfer-utility";
 
 @end
 
-@implementation AWSS3TransferUtilityUploadTask
-
-@end
-
 @interface AWSS3TransferUtilityDownloadTask()
 
 @property (strong, nonatomic) AWSS3TransferUtilityDownloadExpression *expression;
