@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12B21E4C1C2BEDEB00128E88 /* AWSS3TransferUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 12B21E4A1C2BEDEB00128E88 /* AWSS3TransferUtility.h */; };
+		12B21E4D1C2BEDEB00128E88 /* AWSS3TransferUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B21E4B1C2BEDEB00128E88 /* AWSS3TransferUtility.m */; };
 		12ED2BC81C2BA20E0004DBB5 /* AWSS3TransferManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 12ED2BC41C2BA20E0004DBB5 /* AWSS3TransferManager.h */; };
 		12ED2BC91C2BA20E0004DBB5 /* AWSS3TransferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ED2BC51C2BA20E0004DBB5 /* AWSS3TransferManager.m */; };
-		12ED2BCA1C2BA20E0004DBB5 /* AWSS3TransferUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 12ED2BC61C2BA20E0004DBB5 /* AWSS3TransferUtility.h */; };
-		12ED2BCB1C2BA20E0004DBB5 /* AWSS3TransferUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ED2BC71C2BA20E0004DBB5 /* AWSS3TransferUtility.m */; };
 		BD00003A1AB8C526004496EF /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = BD0000391AB8C526004496EF /* credentials.json */; };
 		BD0000581AB8E18E004496EF /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0000571AB8E18E004496EF /* AWSTestUtility.m */; };
 		BD00FF411AB8B6D2004496EF /* libAWSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD00FF401AB8B6D2004496EF /* libAWSCore.a */; };
@@ -91,10 +91,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12B21E4A1C2BEDEB00128E88 /* AWSS3TransferUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSS3TransferUtility.h; sourceTree = "<group>"; };
+		12B21E4B1C2BEDEB00128E88 /* AWSS3TransferUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSS3TransferUtility.m; sourceTree = "<group>"; };
 		12ED2BC41C2BA20E0004DBB5 /* AWSS3TransferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSS3TransferManager.h; sourceTree = "<group>"; };
 		12ED2BC51C2BA20E0004DBB5 /* AWSS3TransferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSS3TransferManager.m; sourceTree = "<group>"; };
-		12ED2BC61C2BA20E0004DBB5 /* AWSS3TransferUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSS3TransferUtility.h; sourceTree = "<group>"; };
-		12ED2BC71C2BA20E0004DBB5 /* AWSS3TransferUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSS3TransferUtility.m; sourceTree = "<group>"; };
 		BD0000391AB8C526004496EF /* credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = credentials.json; path = AWSCoreTests/credentials.json; sourceTree = SOURCE_ROOT; };
 		BD0000561AB8E18E004496EF /* AWSTestUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSTestUtility.h; path = AWSCoreTests/AWSTestUtility.h; sourceTree = SOURCE_ROOT; };
 		BD0000571AB8E18E004496EF /* AWSTestUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSTestUtility.m; path = AWSCoreTests/AWSTestUtility.m; sourceTree = SOURCE_ROOT; };
@@ -210,8 +210,8 @@
 				BDF55A0D1AB377010067F4F1 /* AWSS3Service.m */,
 				12ED2BC41C2BA20E0004DBB5 /* AWSS3TransferManager.h */,
 				12ED2BC51C2BA20E0004DBB5 /* AWSS3TransferManager.m */,
-				12ED2BC61C2BA20E0004DBB5 /* AWSS3TransferUtility.h */,
-				12ED2BC71C2BA20E0004DBB5 /* AWSS3TransferUtility.m */,
+				12B21E4A1C2BEDEB00128E88 /* AWSS3TransferUtility.h */,
+				12B21E4B1C2BEDEB00128E88 /* AWSS3TransferUtility.m */,
 			);
 			path = AWSS3;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 				BDF55A181AB377010067F4F1 /* AWSS3Model.h in Headers */,
 				12ED2BC81C2BA20E0004DBB5 /* AWSS3TransferManager.h in Headers */,
 				BDF55A121AB377010067F4F1 /* AWSS3PreSignedURL.h in Headers */,
-				12ED2BCA1C2BA20E0004DBB5 /* AWSS3TransferUtility.h in Headers */,
+				12B21E4C1C2BEDEB00128E88 /* AWSS3TransferUtility.h in Headers */,
 				BDB73D871B1D3F4900717559 /* AWSS3Resources.h in Headers */,
 				CEE7DE731AC1E1DA0095C4B7 /* AWSS3Service.h in Headers */,
 				BDF55A161AB377010067F4F1 /* AWSS3.h in Headers */,
@@ -387,7 +387,7 @@
 				BDB73D881B1D3F4900717559 /* AWSS3Resources.m in Sources */,
 				BDF55A191AB377010067F4F1 /* AWSS3Model.m in Sources */,
 				BDF55A131AB377010067F4F1 /* AWSS3PreSignedURL.m in Sources */,
-				12ED2BCB1C2BA20E0004DBB5 /* AWSS3TransferUtility.m in Sources */,
+				12B21E4D1C2BEDEB00128E88 /* AWSS3TransferUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,7 @@ NSString *const AWSS3TransferUtilityUserAgent = @"transfer-utility";
 
 @property (strong, nonatomic) AWSServiceConfiguration *configuration;
 @property (strong, nonatomic) AWSS3PreSignedURLBuilder *preSignedURLBuilder;
-@property (strong, nonatomic) NSURLSession *session;
+//@property (strong, nonatomic) NSURLSession *session;
 @property (strong, nonatomic) NSString *sessionIdentifier;
 @property (strong, nonatomic) NSString *temporaryDirectoryPath;
 @property (strong, nonatomic) AWSSynchronizedMutableDictionary *taskDictionary;
@@ -714,11 +714,15 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
 {
     _sessionTask = sessionTask;
     if ([sessionTask isKindOfClass:[NSURLSessionUploadTask class]]) {
-        _progress = [[NSProgress alloc] initWithParent:self.expression.parentProgress userInfo:nil];
+        [self.expression.parentProgress becomeCurrentWithPendingUnitCount:1];
+        _progress = [NSProgress progressWithTotalUnitCount:sessionTask.countOfBytesExpectedToSend];
+        [self.expression.parentProgress resignCurrent];
     }
     
     if ([sessionTask isKindOfClass:[NSURLSessionDownloadTask class]]) {
-        _progress = [[NSProgress alloc] initWithParent:self.expression.parentProgress userInfo:nil];
+        [self.expression.parentProgress becomeCurrentWithPendingUnitCount:1];
+        _progress = [NSProgress progressWithTotalUnitCount:sessionTask.countOfBytesExpectedToReceive];
+        [self.expression.parentProgress resignCurrent];
     }
 }
 
