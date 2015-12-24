@@ -624,6 +624,7 @@ totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
                                                                 totalBytesSent,
                                                                 totalBytesExpectedToSend);
         }
+        [transferUtilityUploadTask.progress setTotalUnitCount:totalBytesExpectedToSend];
         [transferUtilityUploadTask.progress setCompletedUnitCount:totalBytesSent];
     }
 }
@@ -661,6 +662,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
                                                                 totalBytesWritten,
                                                                 totalBytesExpectedToWrite);
     }
+    [transferUtilityDownloadTask.progress setTotalUnitCount:totalBytesExpectedToWrite];
     [transferUtilityDownloadTask.progress setCompletedUnitCount:bytesWritten];
 }
 
@@ -712,11 +714,11 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
 {
     _sessionTask = sessionTask;
     if ([sessionTask isKindOfClass:[NSURLSessionUploadTask class]]) {
-        _progress = [NSProgress progressWithTotalUnitCount:_sessionTask.countOfBytesExpectedToSend];
+        _progress = [[NSProgress alloc] initWithParent:self.expression.parentProgress userInfo:nil];
     }
     
     if ([sessionTask isKindOfClass:[NSURLSessionDownloadTask class]]) {
-        _progress = [NSProgress progressWithTotalUnitCount:_sessionTask.countOfBytesExpectedToReceive];
+        _progress = [[NSProgress alloc] initWithParent:self.expression.parentProgress userInfo:nil];
     }
 }
 

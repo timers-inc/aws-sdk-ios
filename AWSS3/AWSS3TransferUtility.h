@@ -405,6 +405,11 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
 @interface AWSS3TransferUtilityExpression : NSObject
 
 /**
+ Task progress of Prarent
+ */
+@property (nonatomic) NSProgress *parentProgress;
+
+/**
  The request parameters. It is an dictionary of `<NSString *, NSString *>`.
  */
 @property (readonly, nullable) NSDictionary *requestParameters;
