@@ -248,6 +248,11 @@ typedef NS_ENUM(NSInteger, AWSS3PresignedURLErrorType) {
 @property (nonatomic, strong) NSString *contentMD5;
 
 /**
+ Custom
+ */
+@property (nonatomic, strong) NSString *ACL;
+
+/**
  VersionId used in the pre signed URL. Default is nil.
  
  @warning This method has been deprecated. Use `additionalParameters` to set versionId instead. If both has been set, this property will be overwritten by the value in `additionalParameters`.

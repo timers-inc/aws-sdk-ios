@@ -439,6 +439,11 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
  */
 @property (strong, nonatomic, nullable) NSString *contentMD5;
 
+/**
+ Custom ACL
+ */
+@property (nonatomic, nullable) NSString *ACL;
+
 @end
 
 /**

@@ -249,6 +249,7 @@ static AWSS3TransferUtility *_defaultS3TransferUtility = nil;
     getPreSignedURLRequest.minimumCredentialsExpirationInterval = AWSS3TransferUtilityTimeoutIntervalForResource;
     getPreSignedURLRequest.contentType = contentType;
     getPreSignedURLRequest.contentMD5 = expression.contentMD5;
+    getPreSignedURLRequest.ACL = expression.ACL;
 
     [expression assignRequestParameters:getPreSignedURLRequest];
 
@@ -266,6 +267,10 @@ static AWSS3TransferUtility *_defaultS3TransferUtility = nil;
 
         if ([getPreSignedURLRequest.contentMD5 length] > 0) {
             [request setValue:getPreSignedURLRequest.contentMD5 forHTTPHeaderField:@"Content-MD5"];
+        }
+        
+        if ([getPreSignedURLRequest.ACL length] > 0) {
+            [request setValue:getPreSignedURLRequest.ACL forHTTPHeaderField:@"x-amz-acl"];
         }
 
         NSURLSessionUploadTask *uploadTask = [weakSelf.session uploadTaskWithRequest:request
